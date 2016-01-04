@@ -3,7 +3,15 @@
 body {
 	background: url("../images/bg.png") repeat;
 }
-
+#social-media-icons {
+	background: none;
+	padding: 20px 0;
+	margin-top: 0;
+	* {
+		display: inline-block;
+		float: right;
+	}
+}
 .container {
 	background: white;
 	margin-top: 60px;
