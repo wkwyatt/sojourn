@@ -28,32 +28,7 @@ body {
 	margin-top: 60px;
 	padding: 50px;
 }
-.left-content{
-	h2{
-		color:#516d21;
-		font-family: 'Ubuntu', sans-serif;
-	}
-	p{
-		font-family: 'Oswald', sans-serif;
-	}
-	.row{
-		border-top:1px solid gray;
-		padding:3%;
-	}
-	.main-callout{
-			// padding:3%;
-			img{
-				width: 690px;
-				height: 200px;
-			}
-		}
-	.description{
-		// padding:3%;
-		border-top:none !important;
-	}
 
-
-}
 nav{
 	text-align:center;
 	padding-left: 17%;
@@ -65,7 +40,6 @@ nav{
 		margin-top: 40px;
 	}
 }
-
 
 .right-content{
 	img{
@@ -84,11 +58,22 @@ footer {
 		margin: auto;
 		width: 60%;
 		ul {
-			display: inline-block;
+			display: block;
+			list-style: none;
+			li { 
+				border-left: 1px solid black;
+				padding: 0 15px;
+				display: inline-block;
+				&:first-child{
+					border-left: none;
+				}
+			}
 		}
 		#footer-right {
 			float: right;
-			p {
+			span {
+				display: block;
+				position: absolute;
 				bottom: 0;
 			}
 		}
