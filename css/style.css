@@ -14,5 +14,24 @@ body {
 footer {
   position: absolute;
   bottom: 0;
-  background: rgba(255, 255, 255, 0.7);
+  width: 100%;
+  background: rgba(255, 255, 255, 0.6);
+  height: 130px;
+}
+/* line 19, ../compass/sass/style.scss */
+footer #footer-content {
+  margin: auto;
+  width: 60%;
+}
+/* line 22, ../compass/sass/style.scss */
+footer #footer-content ul {
+  display: inline-block;
+}
+/* line 25, ../compass/sass/style.scss */
+footer #footer-content #footer-right {
+  float: right;
+}
+/* line 27, ../compass/sass/style.scss */
+footer #footer-content #footer-right p {
+  bottom: 0;
 }
