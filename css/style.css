@@ -13,23 +13,28 @@ body {
 /* line 13, ../compass/sass/style.scss */
 .left-content h2 {
   color: #516d21;
+  font-family: 'Ubuntu', sans-serif;
 }
-/* line 16, ../compass/sass/style.scss */
+/* line 17, ../compass/sass/style.scss */
+.left-content p {
+  font-family: 'Oswald', sans-serif;
+}
+/* line 20, ../compass/sass/style.scss */
 .left-content .row {
   border-top: 1px solid gray;
   padding: 3%;
 }
-/* line 22, ../compass/sass/style.scss */
+/* line 26, ../compass/sass/style.scss */
 .left-content .main-callout img {
   width: 690px;
   height: 200px;
 }
-/* line 27, ../compass/sass/style.scss */
+/* line 31, ../compass/sass/style.scss */
 .left-content .description {
-  border-top: none;
+  border-top: none !important;
 }
 
-/* line 33, ../compass/sass/style.scss */
+/* line 37, ../compass/sass/style.scss */
 footer {
   margin: 60px 0;
   padding: 60px 0;
@@ -38,20 +43,20 @@ footer {
   width: 100%;
   background: rgba(255, 255, 255, 0.6);
 }
-/* line 40, ../compass/sass/style.scss */
+/* line 44, ../compass/sass/style.scss */
 footer #footer-content {
   margin: auto;
   width: 60%;
 }
-/* line 43, ../compass/sass/style.scss */
+/* line 47, ../compass/sass/style.scss */
 footer #footer-content ul {
   display: inline-block;
 }
-/* line 46, ../compass/sass/style.scss */
+/* line 50, ../compass/sass/style.scss */
 footer #footer-content #footer-right {
   float: right;
 }
-/* line 48, ../compass/sass/style.scss */
+/* line 52, ../compass/sass/style.scss */
 footer #footer-content #footer-right p {
   bottom: 0;
 }
