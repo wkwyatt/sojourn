@@ -28,6 +28,11 @@ body {
 	margin-top: 60px;
 	padding: 50px;
 }
+
+#main-nav {
+	background: rgba(255,255,255,0.85);
+}
+
 .left-content{
 	h2{
 		color:#516d21;
@@ -79,7 +84,7 @@ footer {
 	position: relative;
 	bottom: 0;
 	width: 100%;
-	background: rgba(255,255,255,0.6);
+	background: rgba(255,255,255,0.85);
 	#footer-content {
 		margin: auto;
 		width: 60%;
