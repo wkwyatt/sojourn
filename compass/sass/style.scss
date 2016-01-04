@@ -3,7 +3,26 @@
 body {
 	background: url("../images/bg.png") repeat;
 }
-
+#social-media-icons {
+	background: none;
+	padding: 20px 0;
+	margin-top: 0;
+	* {
+		display: inline-block;
+		float: right;
+	}
+	span {
+		color: rgba(255,255,255,0.7);
+		padding: 0 15px;
+		a{ color: rgba(255,255,255,0.7); }
+	}
+	.sn-icon {
+		border-radius: 50%;
+		background: #0f0;
+		font-size: 24px;
+		padding: 4px 10px;
+	}
+}
 .container {
 	background: white;
 	margin-top: 60px;
@@ -33,7 +52,21 @@ body {
 		border-top:none !important;
 	}
 
+
 }
+nav{
+	text-align:center;
+	padding-left: 17%;
+	height:auto;
+	.navbar-brand{
+		height:auto;
+	}
+	.nav.navbar-nav{
+		margin-top: 40px;
+	}
+}
+
+
 footer {
 	margin: 60px 0;
 	padding: 60px 0;
