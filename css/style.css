@@ -3,34 +3,86 @@ body {
   background: url("../images/bg.png") repeat;
 }
 
-/* line 7, ../compass/sass/style.scss */
+/* line 6, ../compass/sass/style.scss */
+#social-media-icons {
+  background: none;
+  padding: 20px 0;
+  margin-top: 0;
+}
+/* line 10, ../compass/sass/style.scss */
+#social-media-icons * {
+  display: inline-block;
+  float: right;
+}
+/* line 14, ../compass/sass/style.scss */
+#social-media-icons span {
+  color: rgba(255, 255, 255, 0.7);
+  padding: 0 15px;
+}
+/* line 17, ../compass/sass/style.scss */
+#social-media-icons span a {
+  color: rgba(255, 255, 255, 0.7);
+}
+/* line 19, ../compass/sass/style.scss */
+#social-media-icons .sn-icon {
+  border-radius: 50%;
+  background: #0f0;
+  font-size: 24px;
+  padding: 4px 10px;
+}
+
+/* line 26, ../compass/sass/style.scss */
 .container {
   background: white;
   margin-top: 60px;
   padding: 50px;
 }
 
-/* line 13, ../compass/sass/style.scss */
+/* line 32, ../compass/sass/style.scss */
+.left-content h2 {
+  color: #516d21;
+  font-family: 'Ubuntu', sans-serif;
+}
+/* line 36, ../compass/sass/style.scss */
+.left-content p {
+  font-family: 'Oswald', sans-serif;
+}
+/* line 39, ../compass/sass/style.scss */
+.left-content .row {
+  border-top: 1px solid gray;
+  padding: 3%;
+}
+/* line 45, ../compass/sass/style.scss */
+.left-content .main-callout img {
+  width: 690px;
+  height: 200px;
+}
+/* line 50, ../compass/sass/style.scss */
+.left-content .description {
+  border-top: none !important;
+}
+
+/* line 57, ../compass/sass/style.scss */
 nav {
   text-align: center;
   padding-left: 17%;
   height: auto;
 }
-/* line 17, ../compass/sass/style.scss */
+/* line 61, ../compass/sass/style.scss */
 nav .navbar-brand {
   height: auto;
 }
-/* line 20, ../compass/sass/style.scss */
+/* line 64, ../compass/sass/style.scss */
 nav .nav.navbar-nav {
   margin-top: 40px;
 }
 
-/* line 26, ../compass/sass/style.scss */
+/* line 71, ../compass/sass/style.scss */
 .right-content img {
   margin: 2% 0 2% 0;
 }
 
-/* line 31, ../compass/sass/style.scss */
+/* line 76, ../compass/sass/style.scss */
 footer {
   margin: 60px 0;
   padding: 60px 0;
@@ -39,33 +91,20 @@ footer {
   width: 100%;
   background: rgba(255, 255, 255, 0.6);
 }
-/* line 38, ../compass/sass/style.scss */
+/* line 83, ../compass/sass/style.scss */
 footer #footer-content {
   margin: auto;
   width: 60%;
 }
-/* line 41, ../compass/sass/style.scss */
+/* line 86, ../compass/sass/style.scss */
 footer #footer-content ul {
-  display: block;
-  list-style: none;
-}
-/* line 44, ../compass/sass/style.scss */
-footer #footer-content ul li {
-  border-left: 1px solid black;
-  padding: 0 15px;
   display: inline-block;
 }
-/* line 48, ../compass/sass/style.scss */
-footer #footer-content ul li:first-child {
-  border-left: none;
-}
-/* line 53, ../compass/sass/style.scss */
+/* line 89, ../compass/sass/style.scss */
 footer #footer-content #footer-right {
   float: right;
 }
-/* line 55, ../compass/sass/style.scss */
-footer #footer-content #footer-right span {
-  display: block;
-  position: absolute;
+/* line 91, ../compass/sass/style.scss */
+footer #footer-content #footer-right p {
   bottom: 0;
 }
