@@ -98,13 +98,32 @@ footer #footer-content {
 }
 /* line 86, ../compass/sass/style.scss */
 footer #footer-content ul {
+  display: block;
+  list-style: none;
+  padding-left: 0;
+}
+/* line 90, ../compass/sass/style.scss */
+footer #footer-content ul li {
+  border-left: 1px solid black;
+  padding: 0 15px;
   display: inline-block;
 }
-/* line 89, ../compass/sass/style.scss */
+/* line 94, ../compass/sass/style.scss */
+footer #footer-content ul li:first-child {
+  border-left: none;
+  padding-left: 0;
+}
+/* line 100, ../compass/sass/style.scss */
+footer #footer-content #staff-login-img {
+  float: right;
+}
+/* line 101, ../compass/sass/style.scss */
 footer #footer-content #footer-right {
   float: right;
 }
-/* line 91, ../compass/sass/style.scss */
-footer #footer-content #footer-right p {
+/* line 104, ../compass/sass/style.scss */
+footer #footer-content span {
+  display: block;
+  position: absolute;
   bottom: 0;
 }

@@ -84,13 +84,27 @@ footer {
 		margin: auto;
 		width: 60%;
 		ul {
-			display: inline-block;
-		}
-		#footer-right {
-			float: right;
-			p {
-				bottom: 0;
+			display: block;
+			list-style: none;
+			padding-left: 0;
+			li { 
+				border-left: 1px solid black;
+				padding: 0 15px;
+				display: inline-block;
+				&:first-child{
+					border-left: none;
+					padding-left: 0;
+				}
 			}
 		}
+		#staff-login-img { float: right;  }
+		#footer-right {
+			float: right;
+		}
+			span {
+				display: block;
+				position: absolute;
+				bottom: 0;
+			}
 	}
 }
