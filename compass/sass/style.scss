@@ -1,0 +1,44 @@
+@import 'vars';
+
+body {
+	background: url("../images/bg.png") repeat;
+}
+
+.container {
+	background: white;
+	margin-top: 60px;
+	padding: 50px;
+}
+
+footer {
+	margin: 60px 0;
+	padding: 60px 0;
+	position: relative;
+	bottom: 0;
+	width: 100%;
+	background: rgba(255,255,255,0.6);
+	#footer-content {
+		margin: auto;
+		width: 60%;
+		ul {
+			display: block;
+			list-style: none;
+			li { 
+				border-left: 1px solid black;
+				padding: 0 15px;
+				display: inline-block;
+				&:first-child{
+					border-left: none;
+				}
+			}
+		}
+		#footer-right {
+			float: right;
+			span {
+				display: block;
+				position: absolute;
+				bottom: 0;
+			}
+		}
+	}
+}

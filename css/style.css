@@ -26,13 +26,26 @@ footer #footer-content {
 }
 /* line 23, ../compass/sass/style.scss */
 footer #footer-content ul {
-  display: inline-block;
+  display: block;
+  list-style: none;
 }
 /* line 26, ../compass/sass/style.scss */
+footer #footer-content ul li {
+  border-left: 1px solid black;
+  padding: 0 15px;
+  display: inline-block;
+}
+/* line 30, ../compass/sass/style.scss */
+footer #footer-content ul li:first-child {
+  border-left: none;
+}
+/* line 35, ../compass/sass/style.scss */
 footer #footer-content #footer-right {
   float: right;
 }
-/* line 28, ../compass/sass/style.scss */
-footer #footer-content #footer-right p {
+/* line 37, ../compass/sass/style.scss */
+footer #footer-content #footer-right span {
+  display: block;
+  position: absolute;
   bottom: 0;
 }
