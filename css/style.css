@@ -6,14 +6,36 @@ body {
 /* line 7, ../compass/sass/style.scss */
 .container {
   background: white;
-  margin-top: 40px;
+  margin-top: 60px;
   padding: 50px;
 }
 
 /* line 13, ../compass/sass/style.scss */
 footer {
-  position: absolute;
+  margin: 60px 0;
+  padding: 60px 0;
+  position: relative;
   bottom: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.6);
+}
+/* line 20, ../compass/sass/style.scss */
+footer #footer-content {
+  margin: auto;
+  width: 60%;
+}
+/* line 23, ../compass/sass/style.scss */
+footer #footer-content ul {
+  display: inline-block;
+}
+/* line 26, ../compass/sass/style.scss */
+footer #footer-content #footer-right {
+  float: right;
+}
+/* line 28, ../compass/sass/style.scss */
+footer #footer-content #footer-right p {
+  bottom: 0;
+<<<<<<< HEAD
   width: 100%;
   background: rgba(255, 255, 255, 0.6);
   height: 130px;
@@ -34,4 +56,6 @@ footer #footer-content #footer-right {
 /* line 27, ../compass/sass/style.scss */
 footer #footer-content #footer-right p {
   bottom: 0;
+=======
+>>>>>>> master
 }
