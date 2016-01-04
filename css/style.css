@@ -39,6 +39,21 @@ body {
 }
 
 /* line 32, ../compass/sass/style.scss */
+nav {
+  text-align: center;
+  padding-left: 17%;
+  height: auto;
+}
+/* line 36, ../compass/sass/style.scss */
+nav .navbar-brand {
+  height: auto;
+}
+/* line 39, ../compass/sass/style.scss */
+nav .nav.navbar-nav {
+  margin-top: 40px;
+}
+
+/* line 44, ../compass/sass/style.scss */
 footer {
   margin: 60px 0;
   padding: 60px 0;
@@ -47,32 +62,38 @@ footer {
   width: 100%;
   background: rgba(255, 255, 255, 0.6);
 }
-/* line 39, ../compass/sass/style.scss */
+/* line 51, ../compass/sass/style.scss */
 footer #footer-content {
   margin: auto;
   width: 60%;
 }
-/* line 42, ../compass/sass/style.scss */
+/* line 54, ../compass/sass/style.scss */
 footer #footer-content ul {
   display: block;
   list-style: none;
+  padding-left: 0;
 }
-/* line 45, ../compass/sass/style.scss */
+/* line 58, ../compass/sass/style.scss */
 footer #footer-content ul li {
   border-left: 1px solid black;
   padding: 0 15px;
   display: inline-block;
 }
-/* line 49, ../compass/sass/style.scss */
+/* line 62, ../compass/sass/style.scss */
 footer #footer-content ul li:first-child {
   border-left: none;
+  padding-left: 0;
 }
-/* line 54, ../compass/sass/style.scss */
+/* line 68, ../compass/sass/style.scss */
+footer #footer-content #staff-login-img {
+  float: right;
+}
+/* line 69, ../compass/sass/style.scss */
 footer #footer-content #footer-right {
   float: right;
 }
-/* line 56, ../compass/sass/style.scss */
-footer #footer-content #footer-right span {
+/* line 72, ../compass/sass/style.scss */
+footer #footer-content span {
   display: block;
   position: absolute;
   bottom: 0;
