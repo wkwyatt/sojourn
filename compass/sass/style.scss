@@ -21,11 +21,22 @@ footer {
 		margin: auto;
 		width: 60%;
 		ul {
-			display: inline-block;
+			display: block;
+			list-style: none;
+			li { 
+				border-left: 1px solid black;
+				padding: 0 15px;
+				display: inline-block;
+				&:first-child{
+					border-left: none;
+				}
+			}
 		}
 		#footer-right {
 			float: right;
-			p {
+			span {
+				display: block;
+				position: absolute;
 				bottom: 0;
 			}
 		}
