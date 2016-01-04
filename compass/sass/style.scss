@@ -28,7 +28,32 @@ body {
 	margin-top: 60px;
 	padding: 50px;
 }
+.left-content{
+	h2{
+		color:#516d21;
+		font-family: 'Ubuntu', sans-serif;
+	}
+	p{
+		font-family: 'Oswald', sans-serif;
+	}
+	.row{
+		border-top:1px solid gray;
+		padding:3%;
+	}
+	.main-callout{
+			// padding:3%;
+			img{
+				width: 690px;
+				height: 200px;
+			}
+		}
+	.description{
+		// padding:3%;
+		border-top:none !important;
+	}
 
+
+}
 nav{
 	text-align:center;
 	padding-left: 17%;
@@ -38,6 +63,13 @@ nav{
 	}
 	.nav.navbar-nav{
 		margin-top: 40px;
+	}
+}
+
+
+.right-content{
+	img{
+		margin:2% 0 2% 0;
 	}
 }
 
