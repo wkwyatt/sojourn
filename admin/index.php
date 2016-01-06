@@ -16,7 +16,7 @@
 	// we now have a mysql object called result
 	$result = mysql_query($query);
 	if (!$result) {
-		die("Query error: ".print mysql_error());
+		die(print "Query error: ".mysql_error());
 	}
 	// prints sql error if we have one;
 
@@ -50,17 +50,11 @@
 		// $(".container").each(function(){
 		// 	alert("container");
 		// });
+		updateTextArea($("#section").val());
+		$("#section").change(function(){
+			updateTextArea($(this).val());
 
-		$(".dropdown").change(function(){
-			var section = $(this).val();
-			var url = "http://local-sojourn.com/admin/admin_api.php?page=about&section="+section;
-			console.log(url);
-
-			$.getJSON(url, function(json, textStatus) {
-				/*optional stuff to do after success */
-				console.log(json);
-				$('#content').val(json.content);
-			});
+			
 
 		// 	var innerText = "";
 		// 	// console.log(section);
@@ -77,32 +71,42 @@
 
 	});
 		
+	function updateTextArea(section){
+		var url = "http://local-sojourn.com/admin/admin_api.php?page=about&section="+section;
+		console.log(url);
+		$.getJSON(url, function(json, textStatus) {
+			/*optional stuff to do after success */
+			$('#content').val(json.content);
+		});
+	}
 
 	</script>
 </head>
 <body>
 	<div class="container">
-		<div class="row">
-			<div>
-				<select class="form-control dropdown">
-				<?php
-
-					foreach($rows as $row){
-						print '<option value="'.$row['section'].'">'.$row['section'].'</option>';
-					}
-				?>				
-				 </select>				
+		<h1><?php if ($_GET['result']) print $_GET['result']; ?></h1>
+		<form action="http://local-sojourn.com/admin/admin_api.php" method="post">
+			<div class="row">
+				<div>
+					<select id="section" class="form-control dropdown" name="section">
+					<?php
+						foreach($rows as $row){
+							print '<option value="'.$row['section'].'">'.$row['section'].'</option>';
+						}
+					?>				
+					 </select>				
+				</div>
 			</div>
-		</div>
 
-		<div class="row B">
-			<div class="form-group">
-  				<label for="comment">Enter Content</label>
-  				<textarea class="form-control" rows="7" id="content">
-  				</textarea>
+			<div class="row B">
+				<div class="form-group">
+	  				<label for="comment">Enter Content</label>
+	  				<textarea id="content" name="content" class="form-control" rows="7">
+	  				</textarea>
+				</div>
 			</div>
-		</div>
-		<button class="btn btn-primary btn-lg" type="submit">Submit</button>
+			<button class="btn btn-primary btn-lg" type="submit">Submit</button>
+		</form>
 	</div>
 </body>
 </html>
