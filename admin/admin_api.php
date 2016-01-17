@@ -12,8 +12,8 @@
 
 	if(isset($_GET['section'])) {
 		$query = "SELECT * FROM about WHERE section='".$_GET['section']."'";
-		$result = mysql_query($query);
-		$row = mysql_fetch_assoc($result);
+		$result = mysqli_query($query);
+		$row = $result->fetch_assoc();
 		if($row){
 			print json_encode($row);
 		}else{
@@ -23,9 +23,9 @@
 
 	if($_GET['crud_task'] == "delete") {		
 		$query = "DELETE FROM about WHERE id = ".$_GET['id'];
-		$result = mysql_query($query);
-		if(mysql_error()){
-			print mysql_error();
+		$result = mysqli_query($query);
+		if(mysqli_error()){
+			print mysqli_error();
 		} else {
 			header('location: index.php?result=success');
 		}
@@ -33,9 +33,9 @@
 
 	if($_POST['crud_task'] == "addNew") {		
 		$query = "INSERT INTO about (section,content) VALUES ('".$_POST['section']."','".$_POST['content']."')";
-		$result = mysql_query($query);
-		if(mysql_error()){
-			print mysql_error();
+		$result = mysqli_query($link, $query);
+		if(mysqli_error()){
+			print mysqli_error();
 		} else {
 			header('location: index.php?result=success');
 		}
@@ -46,9 +46,9 @@
 		// print_r($_POST);
 		if(isset($_POST['section'])){
 			$query = "UPDATE about SET content = '".$_POST['content']."' WHERE section = '".$_POST['section']."'";
-			$update = mysql_query($query);
-			if(mysql_error()){
-				print mysql_error();
+			$update = mysqli_query($link, $query);
+			if(mysqli_error()){
+				print mysqli_error();
 			} else {
 				header('location: index.php?result=success');
 			}

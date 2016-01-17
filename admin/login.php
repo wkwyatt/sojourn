@@ -10,8 +10,8 @@
 			AND password = '".$_POST['password']."' 
 			AND accessLevel = 1";
 
-		$result = mysql_query($query);
-		if(mysql_num_rows($result) == 1){
+		$result = mysqli_query($link, $query);
+		if(mysqli_num_rows($result) == 1){
 			// user exist and is logged in
 			$_SESSION['username'] = $_POST['email'];
 			header('location:  index.php');
