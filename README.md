@@ -27,9 +27,6 @@ foreach($rows as $row){
 print '<option value="'.$row['section'].'">'.$row['section'].'</option>';
 }
 ?>				
-</select>				
-</div>
-</div>
 ...
 </form>
 ```
@@ -44,10 +41,10 @@ Make sure to link to jquery and bootstrap
 	* https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css
 
 ## Collaborators
+[Chance Rhodes](https://github.com/chancer4)
 ![](https://avatars3.githubusercontent.com/u/15091296?v=3&s=192)
 
-[Chance Rhodes](https://github.com/chancer4)
+[Stuart Tiedemann](https://github.com/stuarttiedemann)
 ![](https://avatars0.githubusercontent.com/u/13318872?v=3&s=192)
 
-[Stuart Tiedemann](https://github.com/stuarttiedemann)
 
