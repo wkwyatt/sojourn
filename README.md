@@ -13,24 +13,24 @@ Full CRUD(create, read, update, delete) functionality.  Created the ability for 
 ## Screenshots
 ![](https://github.com/wkwyatt/sojourn/blob/gh-readme/gh-images/home.png)
 ![](https://github.com/wkwyatt/sojourn/blob/gh-readme/gh-images/login.png)
-![](https://github.com/wkwyatt/sojourn/blob/gh-readme/gh-images/home.png)
+![](https://github.com/wkwyatt/sojourn/blob/gh-readme/gh-images/admin.png)
 
 ## Code
 Using an accordion menu I make calls to the custom API in order to complete crud task.  Also I make a sql query to grab the existing sections headers and content within those sections.
 >   <form action="http://local-sojourn.com/admin/admin_api.php" method="post">
-							<div class="row">
-								<div>
-									<select id="section" class="form-control dropdown" name="section">
-									<?php
-										foreach($rows as $row){
-											print '<option value="'.$row['section'].'">'.$row['section'].'</option>';
-										}
-									?>				
-									 </select>				
-								</div>
-							</div>
-              ...
-						</form>
+>		<div class="row">
+>			<div>
+>				<select id="section" class="form-control dropdown" name="section">
+>					<?php
+>						foreach($rows as $row){
+>							print '<option value="'.$row['section'].'">'.$row['section'].'</option>';
+>						}
+>					?>				
+>				</select>				
+>			</div>
+>		</div>
+>			 ...
+>	</form>
 
 ## Next Step
 * Convert custom CMS to Drupal
