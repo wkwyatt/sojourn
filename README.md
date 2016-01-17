@@ -11,7 +11,9 @@ Full CRUD(create, read, update, delete) functionality.  Created the ability for 
 * Delete information in the database
 
 ## Screenshots
-
+![](https://github.com/wkwyatt/sojourn/blob/gh-readme/gh-images/home.png)
+![](https://github.com/wkwyatt/sojourn/blob/gh-readme/gh-images/login.png)
+![](https://github.com/wkwyatt/sojourn/blob/gh-readme/gh-images/home.png)
 
 ## Code
 Using an accordion menu I make calls to the custom API in order to complete crud task.  Also I make a sql query to grab the existing sections headers and content within those sections.
