@@ -13,9 +13,9 @@ Full CRUD(create, read, update, delete) functionality.  Created the ability for 
 ## Screenshots
 
 
- ## Code
- Using an accordion menu I make calls to the custom API in order to complete crud task.  Also I make a sql query to grab the existing sections headers and content within those sections.
- >   <form action="http://local-sojourn.com/admin/admin_api.php" method="post">
+## Code
+Using an accordion menu I make calls to the custom API in order to complete crud task.  Also I make a sql query to grab the existing sections headers and content within those sections.
+>   <form action="http://local-sojourn.com/admin/admin_api.php" method="post">
 							<div class="row">
 								<div>
 									<select id="section" class="form-control dropdown" name="section">
