@@ -2,14 +2,14 @@
 
 	session_start();
 
-	$link = mysql_connect('127.0.0.1', 'cms-practice', 'x');
+	$link = mysqli_connect('127.0.0.1', 'cms-practice', 'x');
 	if (!$link) {
-	    die('Not connected : ' . mysql_error());
+	    die('Not connected : ' . mysqli_error());
 	}
 	// make phpland the current db
-	$db_selected = mysql_select_db('cms-practice', $link);
+	$db_selected = mysqli_select_db($link, 'cms-practice');
 	if (!$db_selected) {
-	    die ('Can\'t use phpland : ' . mysql_error());
+	    die ('Can\'t use phpland : ' . mysqli_error());
 	}
 
 ?>

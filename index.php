@@ -1,17 +1,17 @@
 <?php 
 	include 'inc/db_connect.php';
 	
-	if($_GET['logout'] == 'true') {
+	if(isset($_GET['logout'])) {
 		session_destroy();
 	}
 	// var called query that is a string that queries the database
 	$query = "SELECT * FROM about";
 	// we now have a mysql object called result
-	$result = mysql_query($query);
+	$result = mysqli_query($link, $query);
 	print mysql_error();
 	// prints sql error if we have one;
 
-	while($row = mysql_fetch_assoc($result)) {
+	while($row = $result->fetch_assoc()) {
 		// Formats the result
 		// print "<pre>";
 		// print_r($rows);

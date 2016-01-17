@@ -9,13 +9,13 @@
 	// var called query that is a string that queries the database
 	$query = "SELECT * FROM about";
 	// we now have a mysql object called result
-	$result = mysql_query($query);
+	$result = mysqli_query($link, $query);
 	if (!$result) {
-		die(print "Query error: ".mysql_error());
+		die(print "Query error: ".mysqli_error());
 	}
 	// prints sql error if we have one;
 
-	while($row = mysql_fetch_assoc($result)) {
+	while($row = $result->fetch_assoc()) {
 		$rows[] = $row;
 	}
 
@@ -89,7 +89,7 @@
 <body>
 	<div class="container">
 		<h1><?php print "Welcome ".$_SESSION['username']; ?></h1>
-		<h1><?php if ($_GET['result']) print $_GET['result']; ?></h1>
+		<h1><?php if (isset($_GET['result'])) { print $_GET['result']; } ?></h1>
 			  <!-- <p><strong>Note:</strong> The <strong>data-parent</strong> attribute makes sure that all collapsible elements under the specified parent will be closed when one of the collapsible item is shown.</p> -->
 			  <div class="panel-group" id="accordion">
 			    <div class="panel panel-default">
