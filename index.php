@@ -1,15 +1,9 @@
 <?php 
-	$connection = mysql_connect("localhost","cms-practice","x");
-	if(!$connection) {
-		die('Could not connect: '.mysql_error());
-	}
-	$db_selected = mysql_select_db('cms-practice', $connection);
-	if(!$db_selected) {
-		die('Cant use about: '.mysql_error());
-	} else {
-		// print "<pre>success!</pre>";
-	}
+	include 'inc/db_connect.php';
 	
+	if($_GET['logout'] == 'true') {
+		session_destroy();
+	}
 	// var called query that is a string that queries the database
 	$query = "SELECT * FROM about";
 	// we now have a mysql object called result
@@ -18,6 +12,7 @@
 	// prints sql error if we have one;
 
 	while($row = mysql_fetch_assoc($result)) {
+		// Formats the result
 		// print "<pre>";
 		// print_r($rows);
 		// print "</pre>";

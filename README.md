@@ -1,5 +1,5 @@
-# Sojourn - Practice creating a custom content management system and API for an existing website
-Using PHP and MySQL
+# Sojourn
+Practice creating a custom content management system and API for an existing website using PHP and MySQL
 
 ## Summary
 Full CRUD(create, read, update, delete) functionality.  Created the ability for a non technical user to make changes to the displayed content of the website through the database. 
@@ -11,7 +11,7 @@ Full CRUD(create, read, update, delete) functionality.  Created the ability for 
 * Delete information in the database
 
 ## Screenshots
-![]()
+
 
  ## Code
  Using an accordion menu I make calls to the custom API in order to complete crud task.  Also I make a sql query to grab the existing sections headers and content within those sections.

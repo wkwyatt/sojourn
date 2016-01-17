@@ -1,15 +1,16 @@
 <?php
-	$link = mysql_connect('127.0.0.1', 'cms-practice', 'x');
-	if (!$link) {
-	    die('Not connected : ' . mysql_error());
-	}
-	// make phpland the current db
-	$db_selected = mysql_select_db('cms-practice', $link);
-	if (!$db_selected) {
-	    die ('Can\'t use phpland : ' . mysql_error());
-	}
+	
+	include '../inc/db_connect.php';
 
-	if($_GET) {
+	print "<pre>";
+	print $_FILES['fileToUpload'];
+	$target_dir =  "uploads/";
+	$target_file = $target_dir.basename($_FILES['fileToUpload']['name']);
+	$image_file_type = pathinfo($target_file, PATHINFO_EXTENSION);
+	$file = getimagesize($_FILES['fileToUpload']['tmp_name']);
+	print $file;
+
+	if(isset($_GET['section'])) {
 		$query = "SELECT * FROM about WHERE section='".$_GET['section']."'";
 		$result = mysql_query($query);
 		$row = mysql_fetch_assoc($result);
@@ -20,16 +21,37 @@
 		}
 	}
 
-	if($_POST) {
-		// print "<pre>";
-		// print_r($_POST);
-
-		$query = "UPDATE about SET content = '".$_POST['content']."' WHERE section = '".$_POST['section']."'";
-		$update = mysql_query($query);
+	if($_GET['crud_task'] == "delete") {		
+		$query = "DELETE FROM about WHERE id = ".$_GET['id'];
+		$result = mysql_query($query);
 		if(mysql_error()){
 			print mysql_error();
 		} else {
-			header('location: http://local-sojourn.com/admin/index.php?result=success');
+			header('location: index.php?result=success');
+		}
+	}
+
+	if($_POST['crud_task'] == "addNew") {		
+		$query = "INSERT INTO about (section,content) VALUES ('".$_POST['section']."','".$_POST['content']."')";
+		$result = mysql_query($query);
+		if(mysql_error()){
+			print mysql_error();
+		} else {
+			header('location: index.php?result=success');
+		}
+	}
+
+	if($_POST['crud_task'] == "update") {
+		// print "<pre>";
+		// print_r($_POST);
+		if(isset($_POST['section'])){
+			$query = "UPDATE about SET content = '".$_POST['content']."' WHERE section = '".$_POST['section']."'";
+			$update = mysql_query($query);
+			if(mysql_error()){
+				print mysql_error();
+			} else {
+				header('location: index.php?result=success');
+			}
 		}
 	}
 
